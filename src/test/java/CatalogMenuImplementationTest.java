@@ -12,6 +12,8 @@ class CatalogMenuImplementationTest {
 
     @BeforeAll
     static void setUp() {
+        //this setup should hold all the variables needed to perform tests for each or all the methods necessary
+        //and can be ran before all or each method based on the annotations @BeforeAll, @BeforeEach...
        catalog = new Catalog();
        music = new Media("human", "pop", "someone");
     }
@@ -19,7 +21,10 @@ class CatalogMenuImplementationTest {
     @Test
     void add() {
         if (catalog.getCatalogs()!=null){
-            Assertions.assertNotNull(catalog.getCatalogs(), "The catalog should not be null");
+            Assertions.assertNotEquals(catalog.getCatalogs(), null);
+            //assert the catalog if statement is not all
+            Assertions.assertNotNull(catalog.getCatalogs(),
+                    "The catalog should not be null");
             catalog.getCatalogs().add(music);
             Assertions.assertEquals(catalog.getCatalogs()
                     .get(catalog.getCatalogs()
