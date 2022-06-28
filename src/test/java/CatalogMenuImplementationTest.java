@@ -29,11 +29,9 @@ class CatalogMenuImplementationTest {
             catalog.setCatalogs(new ArrayList<>());
             Assertions.assertEquals(catalog.getCatalogs().size(), 0);
             catalog.getCatalogs().add(music);
-            catalog.getCatalogs().add(music);
             Assertions.assertEquals(catalog.getCatalogs()
                     .get(0), music, "This should be a music catalog");
         }
-//        return catalog;
     }
 
 
