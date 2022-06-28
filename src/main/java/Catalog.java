@@ -2,6 +2,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Catalog {
+
     private List<Media> catalogs;
 
     public Catalog(List<Media> catalogs) {
